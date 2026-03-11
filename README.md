@@ -59,7 +59,7 @@ Add the following to your `~/.claude/settings.json`. If you already have a `hook
         "hooks": [
           {
             "type": "command",
-            "command": "node \"$HOME/.claude/skills/billing/scripts/compute-cost.js\""
+            "command": "node \"$HOME/.claude/skills/billing/scripts/compute-cost.js\" \"$CLAUDE_SESSION_TRANSCRIPT\" \"$CLAUDE_SESSION_ID\""
           }
         ]
       }
