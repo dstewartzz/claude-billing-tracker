@@ -26,11 +26,7 @@ const BILLING_TAG_PATH = path.join(os.homedir(), ".claude", "billing-active.json
 const PRICING_PATH = path.join(__dirname, "pricing.json");
 
 // Default CSV location — can be overridden via CLAUDE_BILLING_CSV env var
-const DEFAULT_CSV_DIR = process.env.CLAUDE_BILLING_CSV_DIR || path.join(
-  os.homedir(),
-  "OneDrive - Stewart Robbins Brown & Altazan, LLC",
-  "Claude's Folder"
-);
+const DEFAULT_CSV_DIR = process.env.CLAUDE_BILLING_CSV_DIR || os.homedir();
 const CSV_PATH = process.env.CLAUDE_BILLING_CSV || path.join(DEFAULT_CSV_DIR, "claude-billing.csv");
 
 const CSV_HEADER = "date,case_number,description,session_id,duration_minutes,input_tokens,output_tokens,cache_write_tokens,cache_read_tokens,cost_usd";
